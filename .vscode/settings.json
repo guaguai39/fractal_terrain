@@ -1,0 +1,29 @@
+{
+    "files.associations": {
+        "*.h": "cpp",
+        "*.hpp": "cpp",
+        "*.vert": "glsl",
+        "*.frag": "glsl"
+    },
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.intelliSenseMode": "windows-msvc-x64",
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/src",
+        "${workspaceFolder}/build/**"
+    ],
+    "cmake.generator": "Visual Studio 17 2022",
+    "cmake.configureOnOpen": false,
+    "cmake.buildDirectory": "${workspaceFolder}/build/${buildType}",
+    "[cpp]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": false
+    },
+    "[glsl]": {
+        "editor.tabSize": 4
+    },
+    "files.exclude": {
+        "**/.vs": true,
+        "**/*.user": true
+    }
+}

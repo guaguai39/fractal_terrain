@@ -1,0 +1,49 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CMake 配置 (vs2022)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--preset", "vs2022"
+            ],
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "CMake 构建 (Release)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build", "--preset", "vs2022-release"
+            ],
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": "CMake 配置 (vs2022)"
+        },
+        {
+            "label": "CMake 构建 (Debug)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build", "--preset", "vs2022-debug"
+            ],
+            "problemMatcher": "$msCompile",
+            "group": "build",
+            "dependsOn": "CMake 配置 (vs2022)"
+        },
+        {
+            "label": "清理构建目录",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-E", "rm_rf", "${workspaceFolder}/build"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}

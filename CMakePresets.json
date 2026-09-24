@@ -1,0 +1,71 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 16,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "default",
+            "hidden": true,
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "USE_FETCHCONTENT": "ON",
+                "CMAKE_POLICY_VERSION_MINIMUM": "3.5"
+            }
+        },
+        {
+            "name": "vs2026",
+            "displayName": "Visual Studio 2026 (x64)",
+            "description": "本机实际可用的生成器（MSVC v145）",
+            "inherits": "default",
+            "generator": "Visual Studio 18 2026",
+            "architecture": { "value": "x64", "strategy": "set" }
+        },
+        {
+            "name": "vs2022",
+            "displayName": "Visual Studio 2022 (x64)",
+            "description": "若安装了 VS 2022（v143 工具集）可用",
+            "inherits": "default",
+            "generator": "Visual Studio 17 2022",
+            "architecture": { "value": "x64", "strategy": "set" }
+        },
+        {
+            "name": "ninja",
+            "displayName": "Ninja (Release)",
+            "description": "单配置生成器，需先进入 MSVC 开发者命令行环境",
+            "inherits": "default",
+            "generator": "Ninja",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "vs2026-release",
+            "configurePreset": "vs2026",
+            "configuration": "Release"
+        },
+        {
+            "name": "vs2026-debug",
+            "configurePreset": "vs2026",
+            "configuration": "Debug"
+        },
+        {
+            "name": "vs2022-release",
+            "configurePreset": "vs2022",
+            "configuration": "Release"
+        },
+        {
+            "name": "vs2022-debug",
+            "configurePreset": "vs2022",
+            "configuration": "Debug"
+        },
+        {
+            "name": "ninja-release",
+            "configurePreset": "ninja"
+        }
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "运行 fractal_terrain (Release)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/vs2022/bin/fractal_terrain.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/vs2022/bin",
+            "environment": [],
+            "console": "integratedTerminal",
+            "preLaunchTask": "CMake 构建 (Release)"
+        },
+        {
+            "name": "运行 fractal_terrain (Debug)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/vs2022/bin/fractal_terrain.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build/vs2022/bin",
+            "environment": [],
+            "console": "integratedTerminal",
+            "preLaunchTask": "CMake 构建 (Debug)"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+# ---- 构建产物 ----
+build/
+out/
+bin/
+lib/
+*.exe
+*.dll
+*.lib
+*.pdb
+*.ilk
+*.obj
+
+# ---- CMake ----
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+CTestTestfile.cmake
+_deps/
+CMakeUserPresets.json
+
+# ---- 第三方依赖源码（由 CMake 自动克隆，不入库） ----
+third_party/
+
+# ---- Visual Studio ----
+.vs/
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.user
+*.suo
+
+# ---- VS Code（保留 .vscode 配置，忽略本地覆盖） ----
+.vscode/ipch/
+.vscode/.browse.*
+
+# ---- 本地备份 ----
+.backup_*/
+
+# ---- 其他 ----
+.DS_Store
+Thumbs.db
+*.log
+
+docs/
+.workbuddy/

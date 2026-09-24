@@ -1,0 +1,34 @@
+# 分形地形预设 - 程序内按 F5 生成
+# 程序内按 F9 读回；也可直接编辑本文件
+version = 1
+
+# ---------- 地形 ----------
+algo        = 0
+resolution  = 256
+worldSize   = 240
+heightScale = 34
+roughness   = 0.55
+seed        = 2024
+
+# ---------- FBM / Ridged ----------
+fbmOctaves    = 7
+fbmFrequency  = 3
+fbmLacunarity = 2
+fbmGain       = 0.5
+fbmAmplitude  = 1
+fbmWarp       = 0.35
+
+# ---------- 外观 ----------
+fogDensity  = 0.0022
+snowLine    = 0.82
+waterLevel  = 0.06
+wireframe   = 0
+
+# ---------- 相机 ----------
+camX     = 0
+camY     = 82.3723
+camZ     = 148.8
+camYaw   = -88.8997
+camPitch = -35.9001
+camMode  = 0
+camFovY  = 58
